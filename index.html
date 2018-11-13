@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Match-game!</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="intro">
+            <form action="">
+                <div class="player-data">
+                    <h2>Player's info</h2>
+                    <table>
+                        <tr>
+                            <td><label for="first-name">First name: </label></td>
+                            <td><input type="text" id="first-name" autofocus required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="last-name">Last name: </label></td>
+                            <td><input type="text" id="last-name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">E-mail: </label></td>
+                            <td><input type="text" id="email"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="skirt-choice">
+                    <span class="skirt-choice">Choice the skirt:</span> <br>
+                    <img src="img/bg1.jpg" class="skirt-image active" alt="#">
+                    <img src="img/bg2.jpg" class="skirt-image" alt="#">
+                    <img src="img/bg3.jpg" class="skirt-image" alt="#">
+                </div>
+            </form>
+            <div class="difficulty-choice">
+                <span class="skirt-choice">Game difficulty:</span> <br>
+                <button class="button difficulty" id="low">Low</button>
+                <button class="button difficulty" id="medium">Medium</button>
+                <button class="button difficulty active" id="hard">Hard</button>
+            </div>
+            <button class="button save-data" id="button-play">PLAY</button>
+
+            <div class="menu">
+                <span class="timer">TIME: <span id="timer-counter">0</span> s</span>
+            </div>
+            <div class="rules">
+                <button class="button rules-button" id="rules-button">Rules</button>
+            </div>
+        </div>
+        <div class="mask" id="mask"></div>
+        <div class="main">
+
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+            <div class="card">
+                <div class="front-side"></div>
+                <div class="back-side"></div>
+            </div>
+        </div>
+        <div class="rules-window" id="rules-window">
+            <span class="tip"><- push to hide this window...</span>
+            <h4>HELLO, MY FRIEND! <br> <br> How to play:</h4>
+            <p>The main task of this game is to find <strong>pairs!</strong></p>
+            <p>When the game begins, all pictures are hidden</p>
+            <h4> To Play:</h4>
+            <p>1. Select two cards to try to match the pictures.</p>
+            <p>2. If you match the pictures you can go again.</p>
+            <p>3. If they don't match it's the computer turn them.</p>
+            <p>4. The player that finds all pairs wins!</p>
+            <p>5. Have Fun!</p>
+
+        </div>
+        <div class="results-window" id="results">
+            <p>SUCCESS!</p>
+            <span>Your time is: </span><span id="time-result"></span><span> s!</span>
+            <p>BEST PLAYERS:</p>
+            <div class="best-results">
+                <span>1. <span class="result">###</span> --- <span class="player-time"></span></span> s.<br>
+                <span>2. <span class="result">###</span> --- <span class="player-time"></span></span> s.<br>
+                <span>3. <span class="result">###</span> --- <span class="player-time"></span></span> s.<br>
+                <span>4. <span class="result">###</span> --- <span class="player-time"></span></span> s.<br>
+                <span>5. <span class="result">###</span> --- <span class="player-time"></span></span> s.<br>
+                <span>6. <span class="result">###</span> --- <span class="player-time"></span></span> s.<br>
+                <span>7. <span class="result">###</span> --- <span class="player-time"></span></span> s.<br>
+                <span>8. <span class="result">###</span> --- <span class="player-time"></span></span> s.<br>
+                <span>9. <span class="result">###</span> --- <span class="player-time"></span></span> s.<br>
+                <span>10. <span class="result">###</span> --- <span class="player-time"></span></span> s.<br>
+            </div>
+            <button id='play-again' class="button play-again">PLAY AGAIN!</button>
+        </div>
+    </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
